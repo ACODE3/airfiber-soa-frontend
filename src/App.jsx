@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainPage from "./pages/MainPage";
-import MainPage from "./pages/SOAonlyPage";
+import SOAonlyPage from "./pages/SOAonlyPage";
 
 import LogPage from "./pages/LogPage";
 import AdminPage from "./pages/AdminPage";
