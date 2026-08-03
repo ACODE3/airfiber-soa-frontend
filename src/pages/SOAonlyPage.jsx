@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ClientCard from "../components/ClientCard";
 
-function MainPage() {
+function SOAonlyPage() {
   const { cno } = useParams();
   const { stoken } = useParams();
 
@@ -63,33 +63,6 @@ function MainPage() {
             AIRFIBER Client SOA Search
           </h1>
 
-          <div className="w-full">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-
-                const [cnoInput, stokenInput] = searchText.trim().split(/\s+/);
-
-                handleSearchClient(cnoInput, stokenInput);
-              }}
-              className="flex w-full gap-2"
-            >
-              <input
-                value={searchText}
-                onChange={(e) => setSearchText(e.target.value)}
-                placeholder="Enter CNO and token"
-                className="flex-1 rounded-lg border border-slate-300 px-4 py-2 outline-none focus:border-blue-500"
-              />
-
-              <button
-                type="submit"
-                className="rounded-lg bg-blue-600 px-5 py-2 font-semibold text-white hover:bg-blue-700"
-              >
-                Search
-              </button>
-            </form>
-          </div>
-
           {error && (
             <p className="mt-4 rounded-lg bg-red-100 p-3 text-red-700">
               {error}
@@ -103,4 +76,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default SOAonlyPage;

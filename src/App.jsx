@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainPage from "./pages/MainPage";
+import MainPage from "./pages/SOAonlyPage";
+
 import LogPage from "./pages/LogPage";
 import AdminPage from "./pages/AdminPage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -12,8 +14,8 @@ function App() {
       <div className="min-h-screen bg-slate-100">
         <Routes>
           <Route path="/main" element={<MainPage />} />
-          <Route path="/main/:cno/:stoken" element={<MainPage />} /> 
-          <Route path="/" element={<MainPage />} />
+          <Route path="/main/:cno/:stoken" element={<SOAonlyPage />} /> 
+          <Route path="/" element={<SOAonlyPage />} />
 
           <Route path="/login" element={<LogPage />} />
           <Route path="/admin" element={<AdminPage />} />
