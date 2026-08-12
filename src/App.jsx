@@ -26,7 +26,8 @@ function App() {
 
         <main className="flex-1">
           <Routes>
-            <Route path="/main" element={<MainPage />} />
+            {/* Removed Search Function for now  */}
+            {/* <Route path="/search" element={<MainPage />} /> */}
             <Route path="/main/:cno/:stoken" element={<SOAonlyPage />} /> 
             <Route path="/" element={<SOAonlyPage />} />
 
