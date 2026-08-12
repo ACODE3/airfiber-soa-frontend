@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -19,6 +20,47 @@ function Footer() {
             </p>
           </div>
 
+          {/* Legal Pages */}
+          <div className="flex flex-col gap-3 text-center md:text-left">
+
+            <Link
+              to="/privacy-policy"
+              className="group"
+            >
+              <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600">
+                Privacy Policy
+              </p>
+              <p className="text-xs text-slate-400">
+                How we collect, use, and protect your information.
+              </p>
+            </Link>
+
+            <Link
+              to="/user-data-deletion"
+              className="group"
+            >
+              <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600">
+                User Data Deletion
+              </p>
+              <p className="text-xs text-slate-400">
+                Learn how to request deletion of your stored data.
+              </p>
+            </Link>
+
+            <Link
+              to="/terms-of-service"
+              className="group"
+            >
+              <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600">
+                Terms of Service
+              </p>
+              <p className="text-xs text-slate-400">
+                Terms and conditions for using our services.
+              </p>
+            </Link>
+
+          </div>
+
           {/* Right */}
           <div className="text-center md:text-right">
             <h3 className="font-bold text-slate-800">
@@ -34,7 +76,7 @@ function Footer() {
             </p>
 
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/profile.php?id=61592589234955"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center gap-2 text-slate-600 hover:text-blue-600"
