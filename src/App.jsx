@@ -8,20 +8,36 @@ import AdminPage from "./pages/AdminPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ServerOfflinePage from "./pages/ServerOfflinePage";
 
+//components 
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+//Meta Basic Setup Pages 
+// import termsOfService from "./pages/TermsofService";
+// import userDataDeletion from "./pages/UserdataDeletion";
+// import privacyPolicy from "./pages/PrivacyPolicy";
+
+
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-slate-100">
-        <Routes>
-          <Route path="/main" element={<MainPage />} />
-          <Route path="/main/:cno/:stoken" element={<SOAonlyPage />} /> 
-          <Route path="/" element={<SOAonlyPage />} />
+      <div className="min-h-screen flex flex-col bg-slate-50">
+        <Navbar/>
 
-          <Route path="/login" element={<LogPage />} />
-          <Route path="/admin" element={<AdminPage />} />
-          <Route path="/server-offline" element={<ServerOfflinePage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <main className="flex-1">
+          <Routes>
+            <Route path="/main" element={<MainPage />} />
+            <Route path="/main/:cno/:stoken" element={<SOAonlyPage />} /> 
+            <Route path="/" element={<SOAonlyPage />} />
+
+            <Route path="/login" element={<LogPage />} />
+            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/server-offline" element={<ServerOfflinePage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </main>
+
+        <Footer/>
       </div>
     </BrowserRouter>
   );

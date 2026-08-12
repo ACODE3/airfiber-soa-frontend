@@ -1,0 +1,58 @@
+import React from "react";
+import { FaFacebook } from "react-icons/fa";
+
+function Footer() {
+  return (
+    <footer className="bg-white border-t border-slate-200">
+      <div className="mx-auto max-w-5xl px-4 py-8">
+
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+
+          {/* Left */}
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl font-bold text-blue-500">
+              AIRFIBER
+            </h2>
+
+            <p className="mt-1 text-sm text-slate-500">
+              Fast and reliable internet for your home.
+            </p>
+          </div>
+
+          {/* Right */}
+          <div className="text-center md:text-right">
+            <h3 className="font-bold text-slate-800">
+              Imus & Tanza Office
+            </h3>
+
+            <p className="mt-1 text-sm text-slate-500">
+              B3 L39 Carissa Phase 3 Brgy. Bagtas Tanza, Cavite
+            </p>
+
+            <p className="text-sm text-slate-500">
+              0912-523-5797
+            </p>
+
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center gap-2 text-slate-600 hover:text-blue-600"
+            >
+              <FaFacebook className="text-blue-600" />
+              Facebook
+            </a>
+          </div>
+
+        </div>
+
+        <div className="mt-6 border-t border-slate-200 pt-5 text-center text-sm text-slate-400">
+          © 2026 AirFiber. All rights reserved.
+        </div>
+
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;
