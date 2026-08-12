@@ -19,12 +19,14 @@ function Footer() {
               Fast and reliable internet for your home.
             </p>
 
-            <Link
-              to="/website"
-              className="mt-3 inline-block text-sm font-semibold text-blue-600 hover:text-blue-700"
-            >
-              Check our Website
-            </Link>
+            <a
+                href="https://website.airfiberphilippines.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-block text-sm font-semibold text-blue-600 hover:text-blue-700"
+              >
+                Check our Website
+              </a>
           </div>
 
           {/* Legal Pages */}
