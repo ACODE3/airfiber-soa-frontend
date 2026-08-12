@@ -31,17 +31,6 @@ function Navbar() {
           >
             SOA
           </NavLink>
-
-          <NavLink
-            to="/website"
-            className={({ isActive }) =>
-              isActive
-                ? "font-bold text-blue-600"
-                : "font-semibold text-slate-600 hover:text-blue-600"
-            }
-          >
-            Website
-          </NavLink>
         </div>
 
       </div>

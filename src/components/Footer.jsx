@@ -18,6 +18,13 @@ function Footer() {
             <p className="mt-1 text-sm text-slate-500">
               Fast and reliable internet for your home.
             </p>
+
+            <Link
+              to="/website"
+              className="mt-3 inline-block text-sm font-semibold text-blue-600 hover:text-blue-700"
+            >
+              Check our Website
+            </Link>
           </div>
 
           {/* Legal Pages */}
@@ -30,6 +37,7 @@ function Footer() {
               <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600">
                 Privacy Policy
               </p>
+
               <p className="text-xs text-slate-400">
                 How we collect, use, and protect your information.
               </p>
@@ -42,6 +50,7 @@ function Footer() {
               <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600">
                 User Data Deletion
               </p>
+
               <p className="text-xs text-slate-400">
                 Learn how to request deletion of your stored data.
               </p>
@@ -54,6 +63,7 @@ function Footer() {
               <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600">
                 Terms of Service
               </p>
+
               <p className="text-xs text-slate-400">
                 Terms and conditions for using our services.
               </p>
