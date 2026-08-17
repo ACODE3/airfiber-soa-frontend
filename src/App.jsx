@@ -13,9 +13,10 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 //Meta Basic Setup Pages 
- import termsOfService from "./pages/TermsofService";
- import userDataDeletion from "./pages/UserdataDeletion";
-import privacyPolicy from "./pages/PrivacyPolicy";
+ import TermsOfService from "./pages/TermsofService";
+ import UserDataDeletion from "./pages/UserdataDeletion";
+ import PrivacyPolicy from "./pages/PrivacyPolicy";
+
 
 
 function App() {
@@ -38,8 +39,8 @@ function App() {
 
           {/* Routes for Rules   */}
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/User-Data-Deletion" element={<userDataDeletion />} />
-            <Route path="/Terms-Of-Service" element={<termsOfService />} />
+            <Route path="/User-Data-Deletion" element={<UserDataDeletion />} />
+            <Route path="/Terms-Of-Service" element={<TermsOfService />} />
 
 
           </Routes>

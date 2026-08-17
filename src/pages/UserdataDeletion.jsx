@@ -1,8 +1,8 @@
 import React from "react";
 
 function UserdataDeletion() {
-  const deletionEmail = "YOUR_EMAIL@airfiberphilippines.com";
-  const facebookPageUrl = "YOUR_FACEBOOK_PAGE_URL";
+  const deletionEmail = "airfiberhotline@gmail.com";
+  const facebookPageUrl = "https://www.facebook.com/profile.php?id=61592589234955";
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800">

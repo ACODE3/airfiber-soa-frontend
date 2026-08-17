@@ -46,7 +46,7 @@ function Footer() {
             </Link>
 
             <Link
-              to="/user-data-deletion"
+              to="/User-Data-Deletion"
               className="group"
             >
               <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600">
@@ -59,7 +59,7 @@ function Footer() {
             </Link>
 
             <Link
-              to="/terms-of-service"
+              to="/Terms-Of-Service"
               className="group"
             >
               <p className="text-sm font-semibold text-slate-700 group-hover:text-blue-600">

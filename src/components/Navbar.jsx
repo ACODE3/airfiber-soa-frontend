@@ -22,7 +22,7 @@ function Navbar() {
         {/* Navigation */}
         <div className="flex items-center gap-4">
           <NavLink
-            to="/main"
+            to="/"
             className={({ isActive }) =>
               isActive
                 ? "font-bold text-blue-600"
