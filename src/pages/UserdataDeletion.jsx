@@ -6,18 +6,19 @@ function UserdataDeletion() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800">
-      {/* Header */}
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-4xl px-6 py-6">
-          <a href="/" className="text-2xl font-bold text-blue-600">
-            AIRFIBER
-          </a>
-        </div>
-      </header>
 
       {/* Main */}
       <main className="mx-auto max-w-4xl px-6 py-12">
         <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm md:p-12">
+
+         <header className="border-b border-slate-100 bg-white">
+                <div className="mx-auto max-w-4xl px-6 py-6">
+                <a href="/" className="text-4xl font-bold text-blue-600">
+                    AIRFIBER
+                </a>
+                </div>
+            </header> 
+
           <h1 className="text-4xl font-bold tracking-tight text-slate-900">
             User Data Deletion
           </h1>
