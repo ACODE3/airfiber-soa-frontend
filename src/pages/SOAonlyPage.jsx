@@ -60,7 +60,7 @@ function SOAonlyPage() {
       <div className="mx-auto max-w-5xl">
         <div className="mb-6 rounded-2xl bg-white p-6 shadow">
           <h1 className="mb-4 text-2xl font-bold text-slate-800">
-            <span className="text-blue-500">AIRFIBER</span> Client SOA
+            <span className="text-blue-500">AIRFIBER</span> Statement of Account
           </h1> 
 
           {error && (
