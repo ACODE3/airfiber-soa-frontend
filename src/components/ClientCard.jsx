@@ -5,15 +5,14 @@ function ClientCard({ client }) {
     <div className="rounded-2xl bg-white p-6 shadow">
       <div className="mb-6">
         <h2 className="text-xl font-bold text-slate-800">{client.name}</h2>
-        <p className="text-slate-500">{client.cno}</p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <Info label="Cellphone" value={client.cellphone} />
+        <Info label="CNO" value={client.cno} />
         <Info label="Plan" value={client.plan} />
         <Info label="Install Date" value={client.insDate} />
         <Info label="FB Name" value={client.fbName} />
-        <Info label="GCash Code" value={client.gcashCode} />
+        <Info label="Cellphone" value={client.cellphone} />
         <Info label="This Month Due" value={client.thisMonthDue} />
       </div>
 

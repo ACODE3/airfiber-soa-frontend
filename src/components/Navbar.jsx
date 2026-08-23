@@ -20,7 +20,7 @@ function Navbar() {
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center gap-4">
+        {/* <div className="flex items-center gap-4">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -31,7 +31,7 @@ function Navbar() {
           >
             SOA
           </NavLink>
-        </div>
+        </div> */}
 
       </div>
     </nav>

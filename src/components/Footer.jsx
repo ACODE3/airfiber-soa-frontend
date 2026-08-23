@@ -84,7 +84,11 @@ function Footer() {
             </p>
 
             <p className="text-sm text-slate-500">
-              0912-523-5797
+              DITO: 0993-473-7029
+            </p>
+
+            <p className="text-sm text-slate-500">
+              SMART: 0961-447-4024
             </p>
 
             <a
