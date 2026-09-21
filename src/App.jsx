@@ -1,12 +1,16 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 
-import MainPage from "./pages/MainPage";
+import { AuthProvider } from "./context/AuthContext";
+import RequireAuth from "./components/RequireAuth";
+import DashboardLayout from "./components/dashboard/DashboardLayout";
+
 import SOAonlyPage from "./pages/SOAonlyPage";
 
 import LogPage from "./pages/LogPage";
-import AdminPage from "./pages/AdminPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ServerOfflinePage from "./pages/ServerOfflinePage";
+
+import SoaSyncPage from "./pages/dashboard/SoaSyncPage";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -21,7 +25,10 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 function AppContent() {
   const location = useLocation();
 
-  const hideLayout = location.pathname.startsWith("/main/");
+  const hideLayout =
+    location.pathname.startsWith("/main/") ||
+    location.pathname.startsWith("/dashboard") ||
+    location.pathname === "/login";
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
@@ -40,7 +47,21 @@ function AppContent() {
           />
 
           <Route path="/login" element={<LogPage />} />
-          <Route path="/admin" element={<AdminPage />} />
+
+          <Route
+            path="/dashboard"
+            element={
+              <RequireAuth>
+                <DashboardLayout />
+              </RequireAuth>
+            }
+          >
+            <Route index element={<SoaSyncPage />} />
+          </Route>
+
+          {/* Old route kept working for existing links / bookmarks */}
+          <Route path="/admin" element={<Navigate to="/dashboard" replace />} />
+
           <Route
             path="/server-offline"
             element={<ServerOfflinePage />}
@@ -71,9 +92,11 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
